@@ -1,0 +1,5 @@
+﻿<div class="row">
+    <ul id="mensajeError" class="col-md-6 col-xs-12 pull-right" *ngIf="shouldShowErrors()">
+        <li *ngFor="let error of listOfErrors()">{{HtmlTextValues[error][avisosSubject]}}</li>
+    </ul>
+</div>

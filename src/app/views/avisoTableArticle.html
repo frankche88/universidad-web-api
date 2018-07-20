@@ -1,0 +1,99 @@
+<article id="mainContent" class="col-lg-8 col-md-7 col-sm-6 col-xs-12">
+    
+    <!-- section form -->
+    <ng-container *ngIf="CurrentSection == 'form'">
+        <div class="campos-formulario col-xs-12 container">
+        
+            <mat-form-field>
+
+                <input matInput placeholder="Buscar aviso" #input>
+
+            </mat-form-field>
+
+            <div class="spinner-container" *ngIf="dataSource.loading$ | async">
+
+                <mat-spinner></mat-spinner>
+
+            </div>
+    
+        
+            <mat-table class="avisos-table mat-elevation-z8" [dataSource]="dataSource"
+               matSort matSortActive="id" matSortDirection="asc" matSortDisableClear>
+    
+                <ng-container matColumnDef="id">
+                  <mat-header-cell *matHeaderCellDef> Id </mat-header-cell>
+                  <mat-cell class="id-cell"
+                    *matCellDef="let aviso"> <a routerLink="/show-aviso/{{aviso.id}}">{{aviso.id}}</a> </mat-cell>
+                </ng-container>
+                
+                <ng-container matColumnDef="filename">
+                  <mat-header-cell *matHeaderCellDef> Nombre </mat-header-cell>
+                  <mat-cell class="filename-cell"
+                    *matCellDef="let aviso" > {{aviso.avisoName}} </mat-cell>
+                </ng-container>
+                
+                <ng-container matColumnDef="fecha">
+                  <mat-header-cell *matHeaderCellDef> Fecha </mat-header-cell>
+                  <mat-cell class="fecha-cell"
+                    *matCellDef="let aviso" [ngClass]="{'negative' : aviso.vencido == true}" > {{aviso.fechaAviso | date:'dd/MM/yyyy'}} </mat-cell>
+                </ng-container>
+                
+                <ng-container matColumnDef="actionsColumn">
+                    <mat-header-cell *matHeaderCellDef>
+                    </mat-header-cell>
+                    <mat-cell *matCellDef="let aviso">
+                    
+                    <div *ngIf="aviso.editable">
+                    	<a routerLink="/editar-aviso/{{aviso.id}}">
+                    	<img src="assets/css/images/edit-icon16.png" alt="Editar Aviso">
+						</a>
+					</div>
+                    	
+                        
+                    </mat-cell>
+                </ng-container>
+                
+                <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+
+            </mat-table>
+            
+            <mat-paginator [length]="dataSource.avisosLength" [pageSize]="3"
+                   [pageSizeOptions]="[3, 5, 10]"></mat-paginator>
+            
+        </div>
+        
+    </ng-container>
+    <!-- section form -->
+    <div class="resultado-consulta col-xs-12 container" *ngIf="CurrentSection != 'form'">
+        
+        <!-- section validityQueryFail -->
+        <!-- section validityQueryError -->
+        <ng-container *ngIf="CurrentSection == 'validityQueryError'">
+            <div class="form-group ErrorValidation">
+                <strong class="resultado-validacion">
+                    {{TitleFinalMessage}}
+                </strong>
+                <div id="icono-resultado">
+                </div>
+                <em class="palabra-validacion">
+                    <span>{{HtmlTextValues["val_quer_art_lbl_validationWord_error"][avisosSubject]}}</span>
+                </em>
+                <p class="detalle-resultado">
+                    <small>
+                        {{HtmlTextValues["val_quer_art_lbl_validationDetail"][avisosSubject]}}
+                    </small>
+                    <strong>{{HtmlTextValues["val_quer_art_msg_error"][avisosSubject]}}</strong>
+                </p>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div id="btnGroup" class="col-lg-9 col-md-7 col-sm-12 col-xs-12 pull-right">
+                        <input type="button" value="{{HtmlTextValues['val_quer_art_lbl_btnFindAgain'][avisosSubject]}}" class="btn btn-buscar" (click)="ResetAndGoForm()" />
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+        <!-- section validityQueryError -->
+    </div>
+</article>

@@ -1,0 +1,33 @@
+<svg width="48px" height="48px" enable-background="new 0 0 48 48" version="1.0" viewBox="0 0 48 48" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+    <style type="text/css">
+    /* <![CDATA[ */
+
+    .lineaLoading {
+        fill: transparent;
+      stroke-dasharray: 100 100;
+      stroke-dashoffset: -474;
+      stroke-width: 8px;
+      stroke: #19f6e8;
+      -webkit-animation: 2s draw linear;
+      animation: 2s draw linear;
+          animation-iteration-count: infinite;
+          animation-direction: alternate;
+    }
+
+    @keyframes draw {
+      0% {
+        stroke-dasharray: 100 100;
+        stroke-dashoffset: -170;
+
+      }
+      100% {
+        stroke-dasharray: 300;
+        stroke-dashoffset: 0;
+      }
+    }
+    
+    /* ]]> */
+  </style>
+	<path id="lineaAzul" class="lineaLoading" d="m12.575 16.104c-1.26 5.532-2.569 10.569 9.476 10.792 13.225 0.172 12.222 8.435 12.222 8.435-0.148 1.224-0.981 2.942-1.853 3.818l-7.158 7.194c-0.869 0.876-2.294 0.877-3.167 3e-3l-18.553-18.587c-0.873-0.873-0.852-2.282 0.043-3.132l8.459-8.021" stroke-miterlimit="10" style="fill:none;stroke-miterlimit:10;stroke-width:2;stroke:#005cb9"/>
+	<path id="lineaRoja" class="lineaLoading" d="m34.787 31.895c1.267-5.53 2.574-10.569-9.468-10.792-13.229-0.172-12.228-8.428-12.228-8.428 0.149-1.226 0.983-2.944 1.854-3.818l7.157-7.198c0.872-0.875 2.297-0.877 3.169-4e-3l18.554 18.586c0.872 0.874 0.853 2.283-0.043 3.13l-8.167 7.739" stroke-miterlimit="10" style="fill:none;stroke-miterlimit:10;stroke-width:2;stroke:#a90f3d"/>
+</svg>

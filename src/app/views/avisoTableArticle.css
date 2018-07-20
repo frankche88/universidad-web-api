@@ -1,0 +1,98 @@
+.filename-cell {
+    text-align: left;
+    margin: 10px auto;
+}
+
+.id-cell {
+    text-align: center;
+}
+
+.mat-column-actionsColumn {
+    text-align: right;
+    width: 35px !important;
+    word-wrap: break-word !important;
+    white-space: unset !important;
+    flex: 0 0 35px !important;
+    width: 100px !important;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+
+    -ms-word-break: break-all;
+    /* This is the dangerous one in WebKit, as it breaks things wherever */
+    word-break: break-all;
+    /* Instead use this non-standard one: */
+    word-break: break-word;
+
+    /* Adds a hyphen where the word breaks, if supported (No Blink) */
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
+.mat-column-fecha {
+    text-align: right;
+    width: 120px !important;
+    word-wrap: break-word !important;
+    white-space: unset !important;
+    flex: 0 0 120px !important;
+    width: 100px !important;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+
+    -ms-word-break: break-all;
+    /* This is the dangerous one in WebKit, as it breaks things wherever */
+    word-break: break-all;
+    /* Instead use this non-standard one: */
+    word-break: break-word;
+
+    /* Adds a hyphen where the word breaks, if supported (No Blink) */
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
+
+.fecha-cell {
+    text-align: right;
+    width: 120px !important;
+    word-wrap: break-word !important;
+    white-space: unset !important;
+    flex: 0 0 120px !important;
+    width: 100px !important;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+
+    -ms-word-break: break-all;
+    /* This is the dangerous one in WebKit, as it breaks things wherever */
+    word-break: break-all;
+    /* Instead use this non-standard one: */
+    word-break: break-word;
+
+    /* Adds a hyphen where the word breaks, if supported (No Blink) */
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
+
+.spinner-container {
+    height: 360px;
+    width: 390px;
+    position: fixed;
+}
+
+.avisos-table {
+    min-height: 360px;
+    margin-top: 10px;
+}
+
+.spinner-container mat-spinner {
+    margin: 130px auto 0 auto;
+}
+.positive {
+    background-color: green;
+}
+
+.negative {
+    background-color: red;
+}

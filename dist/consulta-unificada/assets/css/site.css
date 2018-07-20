@@ -1,0 +1,1741 @@
+/* INICIO FUENTES CORPORATIVAS */
+@font-face {
+    font-family: 'Gotham Book';
+    src: url('font/GothamBook.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham Thin';
+    src: url('font/Gotham-Thin.otf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham Medium';
+    src: url('font/GothamMedium.ttf') format('truetype');
+    font-weight: 500;
+    font-style:normal;
+}
+
+@font-face {
+    font-family: 'Gotham Bold';
+    src: url('font/Gotham-Bold.otf') format('truetype');
+    font-weight: bold;
+    font-style:normal;
+}
+/* FINAL FUENTES CORPORATIVAS */
+
+
+/* INICIO Estilos genericos */
+
+body{
+    font-size: 11pt;
+    color: #333;
+    min-width: 320px;
+    background-color: #343434;
+    min-height: 100%;
+}
+
+body *{
+    font-family: 'Gotham Book';
+}
+
+nav {
+    margin: 0px !important;
+}
+
+
+/* Estilos colores para cambios en los datos*/
+
+.blueColor {
+    color: #005cb9 !important;
+}
+
+.orangeColor {
+    color: #ffb819 !important;
+}
+
+.orangeFondo {
+    background-color: #ffb819 !important;
+}
+
+.redColor {
+    color: #ac0033 !important;
+}
+
+.redFondo {
+    background-color: #ac0033 !important;
+}
+
+.greenColor {
+    color: #b6bd00 !important;
+}
+
+.greenFondo {
+    background-color: #b6bd00 !important;
+}
+
+.lightBlueColor {
+    color: #009ee0 !important;
+}
+
+.lightPurpleColor {
+    color: #675dc6 !important;
+}
+
+.numerico {
+    text-align: right;
+}
+
+.puntajeLabelBig {
+    font-size: 1.35em;
+}
+
+.redLabel {
+    padding-left: 16px;
+    color: #C00;
+    font-weight: bold;
+}
+
+.btnCerrar {
+    text-decoration: none !important;
+}
+
+.btnCerrar span {
+    display: block;
+    margin: 15px;
+    width: 18px;
+    height: 18px;
+    white-space: nowrap;
+}
+
+.glyphicon-calendar,
+.glyphicon-file{
+    font-size: 1.3em;
+    color: #ffb819;
+    line-height: 0em !important;
+}
+
+.glyphicon-calendar::before{
+	top: 4px !important;
+	vertical-align:baseline;
+}
+
+.btnCerrar span:after {
+    content: "\e928";
+    font-size: 1.2em;
+    font-family: 'SunatIcons';
+    vertical-align: middle;
+    line-height: 0px;
+    margin: 1px;
+}
+
+.btn {
+    font-size: 1.1em;
+    margin: 5px;
+    border: none;
+    padding: 3px 12px;
+    color: #FFF !important;
+    font-family: "Gotham Book";
+}
+
+.btn[disabled] {
+    background: none;
+    background-color: #bfbfbf !important;
+    cursor: not-allowed !important;
+}
+
+.btn.fondoTransparente {
+    color: #b6bd00 !important;
+}
+
+.btn:hover {
+    background-image: url(images/sprites.png);
+	background-position: -120px -160px;
+}
+
+.btn:active,
+.btn:visited {
+    background: none;
+    background-image: url(images/sprites.png);
+	background-position: -150px -90px;
+}
+
+.btn-ayuda{
+	border-radius: 8px;
+	border: 1px solid #CCC;
+	cursor: pointer !important;
+}
+
+.btn-ayuda:hover{
+	background-color: #ffb819;
+}
+
+.btn-verDetalle {
+    text-align: right;
+    white-space: nowrap;
+}
+
+.btn-imprimir {
+    background-color: #675dc6;
+}
+
+.btn-buscar {
+    background-color: #b6bd00;
+}
+
+.btn-save {
+    background-color: #b6bd00;
+}
+
+.btn-limpiar {
+    background-color: #ffb819;
+}
+
+.btn-agregar {
+    background-color: #ffb819;
+}
+
+.btn-activar {
+    background-color: #b6bd00;
+}
+
+.ocultar {
+    display: none;
+}
+
+#archivo{
+    display: none;
+}
+
+/*Etiquetas del formulario*/
+
+label,
+.labelSunat {
+    font-weight: normal !important;
+    display: inline-block;
+    min-height: 32px !important;
+    vertical-align: middle;
+    color: #646464;
+    margin: 0px;
+    padding-top: 6px;
+    font-size: 1em;
+    text-align: right;
+}
+
+button {
+    background: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    color: #FFF;
+    /*padding: 4px;
+    padding-right: 35px;*/
+    min-width: 40px;
+    background-position: right;
+    background-repeat: no-repeat;
+    /*background-size: contain;*/
+}
+
+input[type=button],
+input[type=submit],
+input[type=reset],
+button {
+    font-family: 'Gotham Book', Arial, Helvetica, sans-serif;
+}
+
+.form-control {
+    height: 28px;
+    padding: 4px;
+    border-radius: 0px !important;
+    border-top: none !important;
+    border-bottom: none !important;
+    background: none !important;
+    background-image: url(images/sprites.png) !important;
+    background-position: left bottom  !important;
+	z-index: 0 !important;
+}
+
+.form-control-textarea {
+    padding: 4px;
+    border-radius: 0px !important;
+    border-top: none !important;
+    border-bottom: none !important;
+    background: none !important;
+    background-image: url(images/sprites.png) !important;
+
+    background-position: left bottom  !important;
+	z-index: 0 !important;
+}
+
+input.txtNoEditable {
+    background: none !important;
+    border: none !important;
+    font-size: 1.1em;
+    text-align: right;
+    font-weight: bold;
+}
+
+
+/*Boton de ayuda*/
+
+a.helpBtn {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+a.helpBtn span {
+    display: none;
+}
+
+a.helpBtn:before {
+    content: "\e90a";
+    font-size: 1.5em;
+    display: inline-block;
+    font-family: 'SunatIcons';
+    line-height: 0.5em;
+    vertical-align: middle;
+}
+
+a.stateBtn {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+a.stateBtn:hover {
+    text-decoration: none;
+}
+
+a.stateBtn span {
+    display: none;
+}
+
+#toggleValidationErrorBTN {
+    display: none;
+}
+
+.toggleBTN {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin: 4px;
+    background-image: url('images/sprites.png'); /*70,0*/
+    background-position: -70px 0px;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.toggleToClose {
+    background-image: url('images/sprites.png'); /*70,0*/
+	background-position: -70px 0px;
+}
+
+.toggleToOpen {
+    background-image: url('images/sprites.png'); /*50,0*/
+	background-position: -50px 0px;
+}
+
+.fondoRojoSolido {
+    background-color: transparent;
+    /*background-image: url(images/fondoRojoC.png);*/
+}
+
+.fondoRojoSolidoOscuro {
+    background-color: #B61F30;
+}
+
+.fondoTransparente {
+    background: none !important;
+    background-color: transparent !important;
+    /*background-image: url(images/clfondoTransparente.png);*/
+}
+
+#tooltip,
+.tooltipTutorial {
+	display:none;
+	opacity: 0;
+    position: absolute;
+	bottom: 32px;
+	right: 15px;
+    min-width: 180px;
+    width: 50%;
+    border-radius: 3px;
+    padding: 5px;
+    color: #FFF;
+    font-size: 0.8em;
+    font-weight: bold;
+	text-align:right;
+	transition: opacity 1s;
+}
+
+#tooltip span,
+.tooltipTutorial span{
+    display: block;
+	position:absolute;
+    right: 12px;
+    bottom: -6px;
+    width: 12px;
+    height: 12px;
+	border: none;
+	transform: rotate(45deg);
+	background-color: #B61F30;
+}
+
+.tooltipTutorial{
+	background-color: #FFF !important;
+	color: #b6bd00 !important;
+	border: 2px solid #b6bd00;
+	transition: all 2s;
+	z-index: 2;
+	opacity: 0;
+	display: block;
+}
+
+.tooltipTutorial small{
+	display: block;
+	font-weight:lighter;
+	padding: 2px;
+	background-color: #EEE;
+	border-radius: 3px;
+}
+
+form .fieldErrorValidation .ng-invalid{
+	background-color: #f6d2d1 !important;
+	padding-right: 48px;
+	color:  #B61F30 !important;
+	background-image: url(images/0-invalid.png) !important;
+	border-color: #B61F30 !important;
+	background-position: 98% center !important;
+	background-repeat: no-repeat !important;
+	transition: all 1seg;
+}
+
+.fieldErrorValidation input.ng-invalid{
+	padding-right: 32px;
+	background-position: 98% center !important;
+}
+
+.fieldErrorValidation select.ng-invalid{
+	padding-right: 48px;
+	background-position: 96% center !important;
+}
+
+.fieldErrorValidation:hover #tooltip{
+	display: block;
+	opacity: 1;
+}
+
+.captchaErrorValidation{
+	border-left: 4px solid #B61F30;
+	margin-left: -4px;	
+}
+
+.arrowLeftRadios,
+.arrowRightRadios{
+	background-repeat: no-repeat;
+	background-repeat: no-repeat;
+	width: 15%;
+    max-width: 42px;
+	max-height: 38px;
+    
+    height: 100%;
+    position: absolute;
+	cursor: pointer;
+}
+
+.arrowLeftRadios {
+    background-image: url('images/sprites.png'); /*10,30*/
+    background-position: -10px -30px;
+	left: 0px;
+    margin-left: -5%;
+    border-right: 1px dotted #efefef;
+}
+
+.arrowRightRadios {
+    background-image: url('images/sprites.png');  /*0,60*/
+    background-position: 0px -60px;
+    right: 0px;
+    margin-right: -5%;
+    border-left: 1px dotted #efefef;
+}
+
+.alertFormItem,
+.reminderFormItem,
+.messageFormItem,
+.errorFormItem,
+.notificationFormItem,
+.questionFormItem,
+.userFormItem,
+.registerFormItem,
+.promoFormItem {
+    margin: 5px 0px;
+    padding: 5px;
+}
+
+.alertFormItem:before {
+    content: "\e90e";
+    font-family: "SunatIcons";
+    color: #ff8204 !important;
+}
+
+.reminderFormItem:before {
+    content: "\e913";
+    font-family: "SunatIcons";
+    color: #0097af;
+}
+
+.messageFormItem:before {
+    content: "\e94e";
+    font-family: "SunatIcons";
+}
+
+.errorFormItem:before {
+    content: "\e906";
+    font-family: "SunatIcons";
+}
+
+.notificationFormItem:before {
+    content: "\e902";
+    font-family: "SunatIcons";
+}
+
+.questionFormItem:before {
+    content: "\e924";
+    font-family: 'SunatIcons';
+    vertical-align: middle;
+    line-height: 0px;
+    transform: none !important;
+    font-size: 28px;
+    color: #0097af;
+}
+
+.userFormItem:before {
+    content: "\e912";
+    font-family: "SunatIcons";
+}
+
+.registerFormItem:before {
+    content: "\e908";
+    font-family: "SunatIcons";
+}
+
+.registerFormItem div {
+    position: relative;
+    z-index: 1;
+}
+
+
+/*Estilos genericos para los checkBoxes con iconos*/
+
+.CheckBoxContainer,
+.CheckBoxContainer span,
+.CheckBoxContainer input,
+.RadioButtonContainer,
+.RadioButtonContainer span,
+.RadioButtonContainer input {
+    display: block;
+    cursor: pointer;
+}
+
+.CheckBoxContainer input,
+.RadioButtonContainer input {
+    padding: 0px !important;
+    margin: 0px !important;
+    border: 0px !important;
+    cursor: pointer;
+    opacity: 0;
+    background: none !important;
+    border: none !important;
+    width: 100%;
+    height: 100%;
+    min-height: 32px;
+    min-width: 32px;
+	
+}
+
+.RadioButtonContainer input {
+    position: relative;
+}
+
+.checkBoxChecked,
+.checkBoxUnChecked,
+.checkBoxCheckedDisabled,
+.checkBoxUnCheckedDisabled {
+    background-repeat: no-repeat;
+    min-height: 32px;
+    min-width: 32px;
+	/*max-width: 34px;
+	max-height: 34px;*/
+}
+
+#shortCutsContainer .checkBoxUnChecked,
+#shortCutsContainer .checkBoxChecked,
+#shortCutsContainer .checkBoxUnCheckedDisabled,
+#shortCutsContainer .checkBoxCheckedDisabled{
+	max-width: 100%;
+}
+
+.CheckBoxContainer .checkBoxUnChecked,
+.CheckBoxContainer .checkBoxChecked,
+.CheckBoxContainer .checkBoxUnCheckedDisabled,
+.CheckBoxContainer .checkBoxCheckedDisabled,
+.RadioButtonContainer .checkBoxUnChecked,
+.RadioButtonContainer .checkBoxChecked,
+.RadioButtonContainer .checkBoxUnCheckedDisabled,
+.RadioButtonContainer .checkBoxCheckedDisabled{
+	max-width: 34px ;
+}
+
+.CheckBoxContainer .checkBoxChecked {
+    background-image: url(images/sprites.png); /*410,140*/
+	background-position: -656px -136px;
+}
+
+.CheckBoxContainer .checkBoxCheckedDisabled {
+    background-image: url(images/sprites.png); /*470,140*/
+	background-position: -716px -136px;
+}
+
+.CheckBoxContainer .checkBoxUnChecked {
+    background-image: url(images/sprites.png); /*440,140*/
+	background-position: -686px -136px;
+}
+
+.CheckBoxContainer .checkBoxUnCheckedDisabled {
+    background-image: url(images/sprites.png); /*500,140*/
+	background-position: -746px -136px;
+}
+
+.RadioButtonContainer .checkBoxChecked {
+    background-image: url(images/sprites.png); /*410,170*/
+	background-position: -656px -166px;
+}
+
+.RadioButtonContainer .checkBoxCheckedDisabled {
+    background-image: url(images/sprites.png); /*470,170*/
+	background-position: -716px -166px;
+}
+
+.RadioButtonContainer .checkBoxUnChecked {
+    background-image: url(images/sprites.png); /*440,170*/
+	background-position: -686px -166px;
+}
+
+.RadioButtonContainer .checkBoxUnCheckedDisabled {
+    background-image: url(images/sprites.png); /*500,170*/
+	background-position: -746px -166px;
+}
+
+/* FINAL Estilos genericos */
+
+
+/* INICIO Ajustes Librerias */
+
+
+input[required]{
+    border-left: 5px solid #ff8219;
+}
+
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=number],
+input[type=search],
+input[type=tel],
+input[type=url],
+input[type=time] {
+    background-image: url('images/sprites.png'); /*150,190*/
+    background-position: -150px -190px;
+    background-repeat: repeat-x;
+    display: inline-block;
+}
+
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=email]:focus,
+input[type=number]:focus,
+input[type=search]:focus,
+input[type=tel]:focus,
+input[type=url]:focus,
+input[type=time]:focus {
+	border-color: #999 !important;
+}
+
+input[type=text].required,
+input[type=password].required,
+input[type=email].required,
+input[type=number].required,
+input[type=search].required,
+input[type=tel].required,
+input[type=url].required,
+input[type=time].required {
+    border-left: 5px solid #ff8219;
+	/*background: url('images/sprites.png') no-repeat -660px -40px, url('images/sprites.png') -150px -190px, url('images/sprites.png') no-repeat -660px -40px; /*610,40*/*/
+}
+
+
+/* FINAL Ajustes Librerias */
+
+
+/* INICIO Wraper */
+#wrapper{
+    background-color: #FFF;
+}
+/* FINAL Wraper */
+
+
+/* INICIO header */
+
+    #header {
+        background-color: #b6bd00;
+        background: url(images/DigitalWork.jpg) no-repeat right center;
+        background-size: 90%;
+        min-height: 130px;
+    }
+
+        #header::before{
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100%;
+            min-height: 130px;
+            background: linear-gradient(to right, #b6bd00 10%, rgba(182, 189,0, 0) 70%);
+        }
+
+/*INICIO Identidad Sunat*/
+
+        #CPEIdentity {
+            width: 180px;
+            height: 95px;
+            float: left;
+            position: relative;
+            z-index: 1;
+            margin: 20px  0px 0px 30px;
+            background-image: url(images/sprites.png);
+            background-position: 0px 0px;
+            background-repeat: no-repeat;
+        }
+
+            #CPEIdentity a,
+            #CPEIdentity acronym{
+                float: left;
+                width: 180px;
+                height: 95px;
+                display: block;
+                text-indent: 1000px;
+                overflow: hidden;
+            }
+
+            #header small{
+                display: block;
+                width: calc(100% - 500px);
+                max-width: 400px;
+                font-size: 1em;
+                color: #fff;
+                position: relative;
+                z-index: 1;
+                margin-left: 210px;
+                padding-top: 35px;
+            }
+
+        #SunatIdentity {
+            width: 320px;
+            height: 100px;
+            float: right;
+            margin:  0px;
+            position: relative;
+            z-index: 1;
+            background-image: url(images/sprites.png);
+            background-position: -460px 0px;
+            background-repeat: no-repeat;
+        }
+
+            #SunatIdentity a,
+            #SunatIdentity acronym{
+                display: block;
+                width: 100%;
+                height: 100%;
+                text-indent: 1000px;
+                overflow: hidden;
+            }
+
+/*FINAL Identidad Sunat*/
+
+/* FINAL header */
+
+
+/* INICIO MAINROW */
+
+    #mainRow {
+        background-color: #FFF;
+        overflow: hidden;
+    }
+
+/* INICIO Main Content */
+
+        #presentacionFuncion{
+            height: 100%;
+        }
+            #titlesHeaderMainContent,
+            .head-formulario{
+                padding-top: 40px;
+                margin-bottom: 10px;
+				min-height: 80px;
+            }
+
+            #titlesHeaderMainContent h2 {
+                font-family: 'Gotham Thin';
+                margin: 0px;
+                font-size: 2.9em;
+            }
+
+            #titlesHeaderMainContent h2 span{
+                font-family: 'Gotham Book';
+                display: block;
+                font-size: 0.5em;
+            }
+
+            #presentacionFuncion p{
+                text-align: justify;
+            }
+
+        #mainContent {
+            padding-bottom: 40px;
+            border-left: 1px dotted #CCC;
+            min-height: 420px;
+        }
+		
+			#mainRow .options{
+				position: absolute;
+				z-index: 10;
+				right: 15px;
+			}
+                #mainRow .options #mostrarTutorial,
+                #mainRow .options menu{
+					float: right;
+                }
+                
+                #mainRow .options menu,
+                #mainRow .options menu ul{
+                    margin: 0px;
+                    padding: 0px;
+                }
+
+                    #mainRow .options menu #mostrarIdioma{
+                        border: 1px solid #CCC;
+                        float: right;
+                    }
+
+                    #mainRow .options menu #mostrarIdioma::before{
+                        content: url("images/world.png");
+                    }
+
+                    #mainRow .options menu ul{
+                        float: right;
+                        width: 1px;
+                    }
+
+                        #mainRow .options menu ul li{
+                            display: inline-block;
+                            text-align: center;
+                            vertical-align: middle;
+                            background-color: #CCC;
+                            
+                        }
+						
+							#mainRow .options menu ul li.selected{
+								background-color: #b6bd00;
+							}
+
+            .head-formulario strong{
+                display: block;
+                color: #005cb9;
+                margin-bottom:  10px;
+            }
+
+            .head-formulario small{
+                color: #009ee0;
+				font-style: italic;
+				font-size: 1em;
+				border-left: 3px solid #ff8219;
+				padding: 3px;
+				display: inline-block;
+				background: #f9f9f9;
+            }
+
+            #mainContent .form-group{
+                border-top: 1px dotted #ccc;
+                padding-top: 10px;
+            }
+                .campos-formulario .form-group .row,
+				.tutorial-formulario .form-group .row{
+                    padding-bottom: 10px;
+					position: relative;
+                }
+                    .form-group .row .formItem .separador{
+                        float: left;
+                        margin-left: -15px;
+                        font-size: 1.5em;
+                        color: #999;
+                    }
+					
+					.form-group .row .formItem .input-group{
+						/*z-index: 0;*/	
+					}
+					
+					#mensajeError{
+						
+					}
+					
+						#mensajeError li{
+							color: #ac0033;
+							padding: 5px;
+							border-bottom: 1px solid #EEE;
+							font-size: 0.8em;
+						}
+						
+					#mainContent #loading{
+						display:block;
+						position:static !important;
+					}
+					
+						.lineaLoading{
+						  stroke-dashoffset: 1000;
+						  stroke-dasharray: 1000;
+						}
+					
+				.tutorial-formulario{
+					display:none;
+					opacity: 0;
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					background-color: rgba(255,255,255, 0.8); 
+				}
+				
+				.tutorial-formulario.ng-show{
+					display: block;
+				}
+				
+				.tutorial-formulario.ng-hide{
+					display: none;
+				}
+				
+					.tutorial-formulario .tooltipTutorial{
+						width: 94%;
+						background-color: #FFF;
+						border: 1px solid ffb819;
+						bottom: 32px;
+					}
+					
+						.tutorial-formulario .tooltipTutorial span {
+							background: none !important;
+							border-bottom: 2px solid #ffb819;
+							border-right: 2px solid #ffb819;
+							margin-bottom: -4px;
+						}
+				
+				.tutorial-formulario .formItem{
+					min-height: 28px;
+				}
+            .resultado-consulta{
+                vertical-align: middle;
+            }
+                .resultado-consulta .form-group{
+                    clear: both;
+                }
+                    .resultado-consulta #icono-resultado{
+                        width: 30%;
+                        height: 100%;
+                        max-height: 200px;
+                        float: left;
+                        margin-right: 5%;
+                        margin-top: -40px;
+                        vertical-align: middle;
+                        margin-bottom: 20px;
+                    }
+
+                    .resultado-consulta #icono-resultado::before{
+                        content:"";
+                        text-align: center;
+                        display: block;
+                        width: 200px;
+                        height: 200px;
+                        margin: auto;
+                        background-size: 100% 100%;
+                    }
+
+                    .resultado-consulta .ErrorValidation #icono-resultado::before{
+                        background-image:  url(images/document-alert.svg);
+                    }
+
+                    .resultado-consulta .FailValidation #icono-resultado::before{
+                        background-image:  url(images/document-fail.svg);
+                    }
+
+                    .resultado-consulta .OkValidation #icono-resultado::before{
+                        background-image:  url(images/document-ok.svg);
+                    }
+
+                    .resultado-consulta .resultado-validacion{
+                        display: block;
+                        width: 65%;
+                        max-width: 420px;
+                        font-size: 1.2em;
+                        font-weight: normal;
+                        padding: 30px 0px;
+                        margin-left: 35%;
+                    }
+
+                    .resultado-consulta .palabra-validacion{
+                        display: block;
+                        text-align: center;
+                        max-width: 420px;
+                        margin-left: 35%;
+                        color:red;
+                    }
+
+                   .heading {
+                    display: block;
+                    text-align: center;
+                    max-width: 420px;
+                    margin-left: 25%;
+                    font-family: 'Gotham Bold';
+                    font-size: 1.9em;
+                    font-weight: bold;
+                    }
+
+                    .align {
+                        padding-left: 35px;
+                    }
+
+                    .resultado-consulta .ErrorValidation .palabra-validacion {
+                        background-color: #ffb819;
+                    }
+                    .resultado-consulta .FailValidation .palabra-validacion {
+                        background-color: #ac0033;
+                    }
+                    .resultado-consulta .OkValidation .palabra-validacion {
+                        background-color: #8cc63f;
+                    }
+
+                    .resultado-consulta .ErrorValidation .palabra-validacion span,
+                    .resultado-consulta .FailValidation .palabra-validacion span,
+                    .resultado-consulta .OkValidation .palabra-validacion span{
+                        display: inline-block;
+                        background-color: #FFF;
+                        padding: 0px 15%;
+                        font-family: 'Gotham Bold';
+                        font-size: 2.8em;
+                        line-height: 1.05em;
+                    }
+
+                    .resultado-consulta .OkValidation .palabra-validacion span{
+                        Color: #8cc63f !important;
+                    }
+
+                    .resultado-consulta .ErrorValidation .palabra-validacion span,
+                    .resultado-consulta .ErrorValidation .detalle-resultado,
+                    .resultado-consulta .FailValidation .palabra-validacion span,
+                    .resultado-consulta .FailValidation .detalle-resultado{
+                        color: #ac0033;
+                    }
+
+                    .resultado-consulta .detalle-resultado{
+                        width: 65%;
+                        max-width: 420px;
+                        margin-left: 35%;
+                        margin-top: 30px;
+                    }
+
+                    .resultado-consulta .detalle-resultado small{
+                        display: block;
+                        color: #999;
+                        font-style: italic;
+                        font-size: 1em;
+                    }
+			
+			.bootstrap-datetimepicker-widget{
+				z-index: 4;
+			}
+
+            #imprimible-consulta{
+                box-shadow: 1px 0px 10px rgba(0,0,0,0.3);
+                margin-bottom: 20px;
+                padding: 20px;
+            }
+
+                #imprimible-consulta header{
+                    float: right;
+                    width: 31%;
+                    max-width: 300px;
+                    padding: 1%;
+                    background-color: #EEE;
+                    text-align: center;
+                }
+
+                #imprimible-consulta main{
+                    font-size: 1em !important;
+                }
+
+                    #imprimible-consulta main .datos-emisor,
+                    #imprimible-consulta main .info-adicional-documento{
+                        width: 65%;
+                        float: left;
+                    }
+
+                    #imprimible-consulta main .datos-cliente,
+                    #imprimible-consulta main .vehiculos-adicionales,
+                    #imprimible-consulta main .detalle-notas{
+                        width: 50%;
+                        float: left;
+                        clear: left;
+                    }
+
+                    #imprimible-consulta main .glosa{
+                        float: right;
+                        width: 33%;
+                        clear: right;
+                        display: none;
+                    }
+                    
+                        #imprimible-consulta main .datos-emisor .nombre-razonsocial,
+                        #imprimible-consulta main .datos-emisor .direccion,
+                        #imprimible-consulta main .datos-emisor .ubicacion-geo{
+                            font-weight: bold;
+                        }
+
+                        #imprimible-consulta main .datos-emisor .direccion{
+                            padding-top: 20px;
+                        }
+
+                        #imprimible-consulta main .glosa{
+                            font-size: 1.1em;
+                            text-align: center;
+                            font-weight: bold;
+                        }
+
+                        #imprimible-consulta main .info-adicional-documento time{
+                            display: block;
+                        }
+
+                            #imprimible-consulta main .info-adicional-documento .soloFecha,
+                            #imprimible-consulta main .info-adicional-documento .fechaYhora{
+                                font-size: 0.9em;
+                                width: 35%;
+                            }
+
+                            #imprimible-consulta main .info-adicional-documento .fechaYhora,
+                            #imprimible-consulta.NotaCreditoElectronica .soloFecha,
+                            #imprimible-consulta.NotaDebitoElectronica .soloFecha{
+                                display: none;
+                            }
+
+                        #imprimible-consulta .info-adicional-documento .modif-documento{
+                            display: none;
+                        }
+
+                            #imprimible-consulta .info-adicional-documento .modif-documento .titulo-modif-documento{
+                                font-weight: bold;
+                            }
+
+                        #imprimible-consulta.NotaCreditoElectronica .info-adicional-documento .modif-documento,
+                        #imprimible-consulta.NotaDebitoElectronica .info-adicional-documento .modif-documento,
+                        #imprimible-consulta.NotaCreditoElectronica .fechaYhora,
+                        #imprimible-consulta.NotaDebitoElectronica .fechaYhora,
+                        #imprimible-consulta.NotaCreditoElectronica .glosa,
+                        #imprimible-consulta.NotaDebitoElectronica .glosa{
+                            display: block !important;
+                        }
+
+                        #imprimible-consulta main .documentos-relacionados{
+                            float: right;
+                            width: 50%;
+                            clear: right;
+                            min-height: 100px;
+                        }
+    
+                            #imprimible-consulta .documentos-relacionados .documento-adicional{
+                                padding: 3px;
+                                border-bottom: 1px dotted #999;
+                                font-size: 0.9em;
+                            }
+
+                        #imprimible-consulta .datos-cliente .nombre-razonsocial,
+                        #imprimible-consulta .datos-cliente .numero-ruc,
+                        #imprimible-consulta .datos-cliente .tipo-moneda,
+                        #imprimible-consulta main .detalle-notas .importe-total{
+                            font-size: 0.9em;
+                            margin: 0px !important;
+                        }
+                        
+                            #imprimible-consulta .datos-cliente .nombre-razonsocial label,
+                            #imprimible-consulta .datos-cliente .numero-ruc label,
+                            #imprimible-consulta .datos-cliente .tipo-moneda label,
+                            #imprimible-consulta main .detalle-notas .importe-total label{
+                                width: 35%;
+                            }
+                        
+                    #imprimible-consulta main .detalle-boleta-nota{
+                        clear: both;
+                    }
+
+                    #imprimible-consulta main .detalle-boleta-nota .tabla-detalle{
+                        display: table;
+                        width: 100%;
+                        border-top: 1px dotted #666;
+                        border-bottom: 1px dotted #666;
+                        margin: 5px;
+                    } 
+
+                            #imprimible-consulta main .detalle-boleta-nota .tabla-detalle header{
+                                float: none;
+                                width: auto !important;
+                                clear: both;
+                                background: none;
+                                display:table-header-group;
+                            }
+                                #imprimible-consulta main .detalle-boleta-nota header .tabla-encabezado{
+                                    display: table-cell;
+                                    font-size: 0.9em;
+                                    padding: 0px 3px;
+                                    text-align: left;
+                                    color: #666;
+                                    font-style: italic;
+                                }
+
+                            #imprimible-consulta main .detalle-boleta-nota .tabla-detalle .tabla-filas{
+                                display: table-row-group;
+                            }
+
+                                #imprimible-consulta main .detalle-boleta-nota .tabla-detalle .tabla-filas .fila-tabla{
+                                    display: table-row;
+									padding: 4 px 0px;
+                                }
+								
+								#imprimible-consulta main .detalle-boleta-nota .tabla-detalle .tabla-filas .fila-tabla:nth-child(even){
+									background-color:#eaeaea;
+								}
+
+                                    #imprimible-consulta main .detalle-boleta-nota .tabla-detalle .tabla-filas .fila-tabla div{
+                                        display: table-cell;
+                                        font-size: 0.9em;
+                                        padding: 0px 3px;
+                                        color: #000;
+                                    }
+
+                        #imprimible-consulta main .detalle-boleta-nota .resumen-boleta-nota .valor-letras{
+                            float: left;
+                            width: 42%;
+                            font-size: 0.9em;
+                            color: #666;
+                        }
+
+                        #imprimible-consulta main .detalle-boleta-nota .resumen-boleta-nota .detalle-valores{
+                            float: right;
+                            width: 58%;
+                        }
+
+                            #imprimible-consulta main .detalle-boleta-nota .resumen-boleta-nota .detalle-valores ul{
+                                list-style: none;
+                                list-style-type: none;
+                            }
+
+                            #imprimible-consulta main .detalle-boleta-nota .resumen-boleta-nota .detalle-valores ul li{
+                                font-size: 0.9em;
+                            }
+
+                                    #imprimible-consulta main .detalle-boleta-nota .resumen-boleta-nota .detalle-valores ul label{
+                                        width: 40%;
+                                    }
+
+                                    #imprimible-consulta main .detalle-boleta-nota .resumen-boleta-nota .detalle-valores ul span{
+                                        display: inline-block;
+                                        width: 58%;
+                                        text-align: right;
+                                    }
+
+            #imprimible-consulta footer{
+                clear: both;
+                background: none !important;
+                padding: 10px;
+                border: 1px solid #999;
+            }
+
+
+
+            #btnGroup button,
+            #btnGroup *{
+                float: right;
+            }
+
+
+
+/* FINAL Main Content */
+
+
+/* INICIO Pantalla Errores*/
+
+.exceptionError ins strong {
+    display: block;
+    font-size: 6em;
+    text-align: center;
+    line-height: 1em;
+}
+
+
+/* FINAL Pantalla Errores*/
+
+/* FINAL MAINROW */
+
+
+/* INICIO FOOTER */
+
+    footer{
+        background-color: #343434;
+        min-height: 70px;
+        overflow: hidden;
+    }
+
+    footer #copyright,
+    footer #direccion{
+        padding-top: 2em;
+        font-size: 0.9em;
+        color: #FFF;
+    }
+    footer menu ul{
+        
+        list-style: none;
+        list-style-type: none;
+    }
+
+    footer menu li{
+        
+        margin: 5px;
+    }
+
+    footer menu li a{
+        display:block;
+        width:  32px;
+        height: 32px;
+    }
+
+    footer menu li span{
+        color: #FFF;
+    }
+
+
+
+
+/* FINAL FOOTER */
+
+
+/* INICIO  LOADER*/
+
+
+/*Ventanas de mensajes*/
+
+.tutorial {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-color: #0F0;
+}
+
+#messages,
+#messageDialog {
+    display: none;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+#messages .mensajeModal {
+    max-width: 50%;
+    min-width: 280px;
+    padding: 10px;
+    margin: auto;
+    margin-top: 20%;
+    border: 2px solid #999;
+    border-radius: 5px;
+    background-color: #fff;
+    background-position: bottom;
+    background-repeat: repeat-x;
+}
+
+#messages .ventanaModal {
+    max-width: 86%;
+	max-height: 90%;
+    min-width: 280px;
+	min-height: 320px;
+    padding: 10px;
+    margin: auto;
+    margin-top: 5%;
+    border: 2px solid #999;
+    border-radius: 5px;
+    background-color: #fff;
+    background-position: bottom;
+    background-repeat: repeat-x;
+	overflow: auto;
+}
+
+#messages .ventanaFormulario{
+	display: none;
+	max-width: 50% !important;
+}
+
+#MsgError,
+#MsgAlerta,
+#MsgIncognita,
+#MsgRecordatorio,
+#MsgNotificacion {
+    display: none;
+}
+
+#messages .mensajeModal .icono {
+    width: 48px;
+    height: 48px;
+    float: left;
+    
+    background-repeat: no-repeat;
+}
+
+#messages .mensajeModal .iconoRecordatorio48x {
+    /*background-image: url(images/FormMsgeReminderIcon.png); 100,190*/
+	background-position: center;
+}
+
+#messages .mensajeModal .iconoError48x {
+    /*background-image: url(images/FormMsgeErrorIcon.png); 50,140*/
+	background-position: center;
+}
+
+#messages .mensajeModal .iconoAlerta48x {
+    /*background-image: url(images/FormMsgeAlertIcon.png); 0,140*/
+	background-position: center;
+}
+
+#messages .mensajeModal .iconoIncognita48x {
+    /*background-image: url(images/FormMsgeQuestionIcon.png); 50,190*/
+	background-position: center;
+}
+
+#messages .mensajeModal .iconoNotificacion48x {
+    /*background-image: url(images/FormMsgeNotificationIcon.png); 0,190*/
+	background-position: center;
+}
+
+#messages .mensajeModal .estiloTexto {
+    display: block;
+    margin-top: 18px;
+    margin-left: 56px;
+    min-height: 56px;
+    overflow: auto;
+    max-height: 200px;
+}
+
+#messages .mensajeModal .modalButtons {
+    margin-top: 15px;
+    text-align: right;
+}
+
+#messages .mensajeModal button {
+    background-color: transparent;
+    width: 49%;
+    max-width: 200px;
+    border: none;
+    font-size: 1em;
+    color: #666;
+    min-height: 36px;
+    text-align: center;
+    background-color: #ccc;
+    border-bottom: 1px solid #666;
+}
+
+#messages .mensajeModal button:hover {
+    background-color: #666;
+    color: #FFF;
+    border-bottom-color: #B00;
+}
+
+
+/*Cargando*/
+
+
+/*version de leap*/
+
+.waitingIcon {
+    width: 32px;
+    height: 32px;
+    background-image: url(images/waitingIcon.gif);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.waitingIcon span {
+    display: none;
+}
+
+#loading {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: transparent;
+}
+
+#loading .cargandoModal {
+    max-width: 30%;
+    min-width: 280px;
+    padding: 10px;
+    margin: auto;
+    margin-top: 20%;
+}
+
+#mainContent #loading .cargandoModal {
+	margin-top: 0%;
+}
+
+#loading .cargandoModal .iconoCargando48x {
+    display: block;
+    width: 130px;
+    height: 60px;
+    margin: auto;
+	background-image: url(images/loading.svg);
+	background-position:center;
+	background-repeat: no-repeat;
+}
+
+#loading .cargandoModal .estiloTexto {
+    display: block;
+    text-align: center;
+    color: #FFF;
+}
+
+
+/* FINAL  LOADER*/
+
+
+/* INICIO LOADING */
+
+#loading {
+    display: none;
+}
+
+/* FINAL  */
+
+@keyframes apareceAyuda{
+	0%{
+		opacity: 0;
+	}
+	66%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+
+/* INICIO Media Querys */
+
+
+
+
+@media only screen and (max-width : 1999px) {
+    
+}
+
+
+
+@media only screen and (max-width : 992px) {
+    .resultado-consulta #icono-resultado::before{
+        width:100px;
+        height: 100px;
+    }
+	#tooltip,
+	.tooltipTutorial {
+		width: 75%;
+			right: auto;
+			left: 15px;
+			text-align: left;
+		}
+		
+		#tooltip span,
+		.tooltipTutorial span {
+			left: 12px;
+			right: auto;
+			
+		}
+}
+
+@media only screen and (max-width : 768px) {
+    #header{
+        max-height: 140px;
+    }
+        #SunatIdentity{
+            width: 190px;
+            height: 60px;
+            background-position: -590px -100px;
+        } 
+        #CPEIdentity{
+            margin-left: 5px;
+            margin-top: 9px;
+            width: 120px;
+            height: 63px;
+            background-position: 0px -100px;
+        }
+        #header small{
+            width: auto;
+            clear: both;
+            margin: 10px;
+            padding-top: 5px;
+        }
+    
+    #mainContent{
+        border: none;
+    }
+
+        .resultado-consulta #icono-resultado::before{
+            width:160px;
+            height: 160px;
+            
+        }
+}
+
+@media only screen and (max-width : 480px) {
+    #titlesHeaderMainContent h2 {
+        font-size: 2em;
+        margin-bottom:  30px;
+    }
+
+    #titlesHeaderMainContent h2 span{
+        font-size: 0.5em;
+    }
+
+    .resultado-consulta #icono-resultado::before{
+        width:120px;
+        height: 120px;
+        margin-left: -30px;
+    }
+
+    .resultado-consulta .resultado-validacion{
+        font-size: 1em;
+        margin: auto;
+        margin-bottom: 10px;
+        width: auto;
+    }
+
+    .resultado-consulta .palabra-validacion{
+        margin-right: -20%;
+    }
+
+    .resultado-consulta .palabra-validacion span{
+        font-size: 1.75em !important;
+    }
+
+    .resultado-consulta .detalle-resultado{
+        clear: both;
+        margin: auto;
+        width:  auto;
+    }
+    
+    footer #direccion span,
+    footer #copyright span{
+        display: block;
+    }
+}
+
+
+@media only screen and (max-width : 330px) {
+    .resultado-consulta .palabra-validacion{
+        text-align: left !important;
+    }
+
+    .resultado-consulta .palabra-validacion{
+        padding: 0px 10%;
+    }
+}
+
+
+
+
+/* FINAL Media Querys */
+
+
+/* INICIO Estilos Impresion */
+
+@page {
+    margin: 0.5cm !important;
+}
+
+@media print {
+    /*Estilos genericos para version de impresion*/
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+		font-size: 0.9em;
+        padding: 0;
+    }
+    #header {
+        display: none;
+    }
+    
+	#presentacionFuncion,
+	.head-formulario,
+	
+	#mainContent #btnGroup,
+	#messages,
+	#loading,
+	footer menu,
+	#mainRow .options
+	{
+		display: none !important;
+	}
+	
+	#mainContent {
+        margin: 0 0 0 6mm;
+        padding: 0;
+		width: 100% !important;
+		border: none;
+    }
+	
+	#imprimible-consulta header{
+		border: 1px solid #666;
+	}
+	
+	.fila-tabla{
+		padding: 3mm 0mm;
+		border-bottom: 1pt solid #CCC;
+	}
+
+    #footer {
+        width: 100% !important;
+    }
+	
+}
+
+
+/* FINAL Estilos Impresion */
+
+

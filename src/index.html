@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Avisos a la orden</title>
+  <base href="/">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- styles -->
+    
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous">
+    <link href="//cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/build/css/bootstrap-datetimepicker.css" rel="stylesheet">
+    
+    <link href="assets/css/site.css" rel="stylesheet">
+    <!-- scripts -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <!--<script type="text/javascript" src="~/assets/scripts/jquery-2.1.1.min.js"></script>>-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment-with-locales.js"></script>
+    <!--<script type="text/javascript" src="~/assets/scripts/moment-with-locales.js"></script>>-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+    <script type="text/javascript" src="assets/scripts/bootstrap-datetimepicker_4.15.js"></script>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="assets/scripts/interaction.js"></script>
+    <style>
+      .list-ul,
+      .list-ol,
+      .bold,
+      .italic,
+      .link 
+      {
+    color: #000  !important;
+}
+  </style>
+  
+  
+  
+  
+  
+</head>
+<body>
+
+    <div id="wrapper">
+        <header id="header">
+            <nav class="navbar navbar-default navbar-fixed-top">
+              <div class="container">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>                        
+                  </button>
+                  <a class="navbar-brand"><img class="img-responsive" src="https://cdn-images-1.medium.com/max/840/1*X_AHI65le9axxT-801aW4Q.jpeg"  WIDTH=150 HEIGHT=80 align="absmiddle"></a>
+                </div>
+              </div>
+            </nav>
+        </header>
+        
+            
+            <div class="text-center">
+              <h1>Univeridad</h1> 
+              <p>Listar alumnos</p>
+            </div>
+<div class="row">
+    <div class="col-md-10 col-md-offset-2">
+    
+    <app><router-outlet></router-outlet>
+</app>
+    
+    </div>
+</div>
+
+
+
+<footer class="container-fluid">
+            <div id="copyright" class="col-sm-5 col-xs-12">
+                2018-I - :
+            </div>
+            <menu class="col-sm-3 col-xs-12">
+                <ul>
+                    <li>
+
+                            <span>Frank Jonislla</span>
+
+                    </li>
+                    
+                </ul>
+            </menu>
+        </footer>
+    </div>
+    
+    <!--mensajes: alerta, error, recordatorio, pregunta, notificacion-->
+    <div id="messages">
+        <div class="mensajeModal" id="MsgModal" title="Recordatorio">
+            <span class="icono"></span>
+            <span class="estiloTexto"></span>
+            <div class="modalButtons">
+                <button class="actionBtn" style="display:none"></button>
+                <button class="okBtn">Aceptar</button>
+            </div>
+        </div>
+        <div class="ventanaModal" id="customerModal">
+        </div>
+    </div>
+    <!--mensajes: alerta, error, recordatorio, pregunta, notificacion-->
+    <!--cargando-->
+    <div id="loading">
+        <div class="cargandoModal" title="Cargando...">
+            <span class="icono iconoCargando48x margen10"></span>
+            <span class="estiloTexto">
+                Cargando...
+            </span>
+        </div>
+    </div>
+</body>
+</html>
